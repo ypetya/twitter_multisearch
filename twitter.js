@@ -3,14 +3,22 @@ Twitter = {
 
     // plugin defaults
     defaults: {
+        // preloader dom element id
         preloaderId: "preloader",
         loaderText: "Loading tweets...",
+        // poller thread refresh timeout in milliseconds
         poller_timeout: 2000,
+        // ui refresh timeout in milliseconds
         poller_thread_timeout: 10000,
+        // feed elements max count in dom
         dom_feed_length: 20,
+        // cache for poller threads, and refresh ui
         cache_max_size: 100,
+        // you can disable ads by settings insert_ad_after value to 0
         insert_ad_after: 10,
+        // this function name will be used by twitter js api
         callback_name: 'push_json',
+        // this item will be inserted into the dom
         template_item: 
             "<li><div class='clearfix'>" + 
             "<div class='user'><img class='thumbnail'/><div class='floating_text'><div class='user_name'></div><br/>" + 
@@ -109,7 +117,7 @@ Twitter = {
 
         if(results.length==0) return;
 
-        if( Twitter.ad_counter > Twitter.config.insert_ad_after ){
+        if( Twitter.config.insert_ad_after != 0  && Twitter.ad_counter > Twitter.config.insert_ad_after ){
             Twitter.ad_counter = 0;
             var a = Twitter.adverts[ Math.floor( Math.random() * Twitter.adverts.length) ];
             results.push(a);
