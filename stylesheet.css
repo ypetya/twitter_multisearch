@@ -1,0 +1,131 @@
+div#twitter {
+  overflow: hidden;
+	width: 630px;
+	margin-bottom: 2em;
+	border: 0;
+  height: 700px;
+}
+
+div#twitter h2 {
+	margin: 0;
+	padding: 0.4em 1em;
+	font-size: 1.1em;
+	color: #fff;
+	background-color: #888;
+}
+
+p#preloader {
+	margin: 0;
+	padding: 1em 1em 1em 3em;
+	background: transparent url("loader.gif") 1em center no-repeat;
+	/* generate your own loader gif: http://www.ajaxload.info */
+}
+
+ul#twitter_update_list {
+	margin: 0;
+	padding: 0 1em 0.5em 1em;
+	list-style-type: none;
+}
+
+ul#twitter_update_list li {
+	margin: 0;
+	padding: 0.8em 0 1em 0;
+	border-bottom: 1px solid #ccc;
+}
+
+ul#twitter_update_list li a {
+	/* timestamp link */
+	color: #f00;
+}
+
+ul#twitter_update_list li span {
+	display: block;
+}
+
+ul#twitter_update_list li span a {
+	/* links in tweet */
+	color: #00f;
+}
+
+ul#twitter_update_list li.firstTweet {
+}
+
+ul#twitter_update_list li.lastTweet {
+	border-bottom: none;
+}
+
+a#profileLink {
+	display: block;
+	padding: 0.3em 1em;
+	color: #fff;
+	background-color: #888;
+}
+
+
+body {
+	font-family: Arial Narrow, Vedrana, Arial, Helvetica, sans-serif;
+
+	font-size: 100%;
+}
+
+html, body {
+    overflow:hidden;
+    margin: 0 0 0 0;
+    border: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    visible: hidden;
+}
+
+#twitter_update_list li{
+    padding: 10px;
+}
+
+#twitter_update_list .user, .thumbnail, .user_name, .message, .floating_text{
+    display: block;
+    float: left;
+}
+
+#twitter_update_list .firstTweet {
+	background-color:rgb(111,163,31) ;
+}
+
+#twitter_update_list .firstTweet .floating_text{
+    width: 450px;
+}
+
+
+#twitter_update_list .message{
+    font-weight: bolder;
+    padding: 10px;
+}
+
+#twitter_update_list img{
+    height: 72px;
+    width: 72px;
+	padding: 0.5em;
+}
+
+#twitter_update_list  .firstTweet img{
+    height: 72px;
+    width: 72px;
+}
+
+#twitter_update_list .firstTweet{
+    padding: 50px;
+/*    background-color: black;
+    color: white; */
+    height: auto;
+    width: 640px;
+    font-size: 2.0em;
+}
+
+#twitter_update_list .floating_text{
+    width: 409px;
+}
+

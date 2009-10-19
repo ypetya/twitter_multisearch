@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>Twitter feed</title>
+
+		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+
+		<script type="text/javascript" src="firebugx.js"></script>
+		<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="helpers.js"></script>
+		<script type="text/javascript" src="twitter.js"></script>
+		<script type="text/javascript" src="jquery.livequery.js"></script>
+
+    <script type="text/javascript">
+    // it should be an empty array ..
+    Twitter.adverts= [
+        {id: 1, from_user: 'example1', profile_image_url: 'http://example1.png', 
+        text: 'first example advert! :)'},
+        {id: 2, from_user: 'example2', profile_image_url: 'http://example2.png',
+        text: 'second ad! :)'},
+        {id: 3, from_user: 'example3', profile_image_url: 'http://example_url3.png', 
+        text: 'advert 3.! :)'},
+        {id: 4, from_user: 'example4', profile_image_url: 'http://example_urln.png', 
+        text: 'ad 4! :)'}];
+
+    </script>
+
+		<script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			$(document).ready(function() {
+				$("#twitter").getTwitter({
+            searchCriteria: 'fail,google',
+            poller_timeout: 2000,
+            dom_feed_length: 20,
+            cache_max_size: 100,
+            insert_ad_after: 10
+				});
+			});
+		//--><!]]>
+		</script>
+	</head>
+
+	<body>
+      <div style="width:5px;height:720px;overflow:hidden;background-color:rgb(132,194,37);float:left"></div>
+      <div id="twitter">
+          <ul id="twitter_update_list" style="display:none;padding: 5px">
+          </ul>
+      </div>
+	</body>
+</html>
